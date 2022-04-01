@@ -45,7 +45,7 @@ public class UpdateOrderController : ControllerBase
             await client.PostAsync($"{EmailUrl}/email/sent/{orderId}", data);
         }
 
-        return Ok(responseContent);
+        return Ok();
     }
     
     [HttpPut("receive/{orderId}")]
@@ -67,6 +67,6 @@ public class UpdateOrderController : ControllerBase
             await client.PostAsync($"{EmailUrl}/email/receive/{orderId}", data);
         }
 
-        return Ok(responseContent);
+        return Ok();
     }
 }
